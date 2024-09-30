@@ -521,7 +521,7 @@ void AiUsbTc32::getCfg_ExpCalDateStr(int calTableIndex, char* calDate, unsigned 
 {
 	mDaqDevice.checkConnection();
 
-	long int calDateSec = getCfg_ExpCalDate(calTableIndex);
+	time_t calDateSec = getCfg_ExpCalDate(calTableIndex);
 
 	// convert seconds to string
 	struct tm *timeinfo;
